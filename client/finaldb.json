@@ -1,0 +1,700 @@
+[
+  {
+    "title": "html",
+    "questionArray": [
+      {
+        "title": "html",
+        "questions": "What does HTML5 semantic tag <nav> represent?",
+        "options": [
+          {
+            "option": "Navigation section",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "option": "Navigation bar",
+            "isCorrect": false,
+            "id": 1
+          },
+          { "option": "Navigation menu", "isCorrect": false, "id": 2 },
+          { "option": "Navigation link", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Navigation section"
+      },
+      {
+        "title": "html",
+        "questions": "Which HTML5 element is used for playing video files?",
+        "options": [
+          { "option": "<media>", "isCorrect": false, "id": 0 },
+          { "option": "<video>", "isCorrect": true, "id": 1 },
+          { "option": "<movie>", "isCorrect": false, "id": 2 },
+          { "option": "<play>", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "<video>"
+      },
+      {
+        "title": "html",
+        "questions": "What is the purpose of the HTML5 <canvas> element?",
+        "options": [
+          { "option": "Drawing graphics", "isCorrect": true, "id": 0 },
+          { "option": "Creating tables", "isCorrect": false, "id": 1 },
+          { "option": "Displaying images", "isCorrect": false, "id": 2 },
+          { "option": "Playing audio", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Drawing graphics"
+      },
+      {
+        "title": "html",
+        "questions": "Which attribute is used to make an input field required in HTML5?",
+        "options": [
+          { "option": "mandatory", "isCorrect": false, "id": 0 },
+          { "option": "required", "isCorrect": true, "id": 1 },
+          { "option": "necessary", "isCorrect": false, "id": 2 },
+          { "option": "compulsory", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "required"
+      },
+      {
+        "title": "html",
+        "questions": "What does the HTML5 <article> element represent?",
+        "options": [
+          { "option": "A blog post", "isCorrect": false, "id": 0 },
+          { "option": "A self-contained composition", "isCorrect": true, "id": 1 },
+          { "option": "A news article", "isCorrect": false, "id": 2 },
+          { "option": "A magazine article", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A self-contained composition"
+      },
+      {
+        "title": "html",
+        "questions": "Which HTML5 element is used for creating a progress bar?",
+        "options": [
+          { "option": "<progress>", "isCorrect": true, "id": 0 },
+          { "option": "<meter>", "isCorrect": false, "id": 1 },
+          { "option": "<bar>", "isCorrect": false, "id": 2 },
+          { "option": "<status>", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "<progress>"
+      },
+      {
+        "title": "html",
+        "questions": "What is the purpose of the HTML5 <datalist> element?",
+        "options": [
+          { "option": "Creating dropdown lists", "isCorrect": false, "id": 0 },
+          { "option": "Providing predefined options for input", "isCorrect": true, "id": 1 },
+          { "option": "Creating data tables", "isCorrect": false, "id": 2 },
+          { "option": "Storing form data", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Providing predefined options for input"
+      },
+      {
+        "title": "html",
+        "questions": "Which HTML5 element is used for creating a sidebar?",
+        "options": [
+          { "option": "<sidebar>", "isCorrect": false, "id": 0 },
+          { "option": "<aside>", "isCorrect": true, "id": 1 },
+          { "option": "<side>", "isCorrect": false, "id": 2 },
+          { "option": "<panel>", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "<aside>"
+      },
+      {
+        "title": "html",
+        "questions": "What does the HTML5 <figure> element represent?",
+        "options": [
+          { "option": "A mathematical figure", "isCorrect": false, "id": 0 },
+          { "option": "Self-contained content with optional caption", "isCorrect": true, "id": 1 },
+          { "option": "A diagram", "isCorrect": false, "id": 2 },
+          { "option": "A chart", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Self-contained content with optional caption"
+      },
+      {
+        "title": "html",
+        "questions": "Which HTML5 element is used for creating a footer?",
+        "options": [
+          { "option": "<bottom>", "isCorrect": false, "id": 0 },
+          { "option": "<footer>", "isCorrect": true, "id": 1 },
+          { "option": "<end>", "isCorrect": false, "id": 2 },
+          { "option": "<foot>", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "<footer>"
+      }
+    ]
+  },
+  {
+    "title": "css",
+    "questionArray": [
+      {
+        "title": "css",
+        "questions": "What is CSS Grid used for?",
+        "options": [
+          { "option": "Creating 2D layouts", "isCorrect": true, "id": 0 },
+          { "option": "Styling text", "isCorrect": false, "id": 1 },
+          { "option": "Adding animations", "isCorrect": false, "id": 2 },
+          { "option": "Creating colors", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Creating 2D layouts"
+      },
+      {
+        "title": "css",
+        "questions": "Which CSS property is used for creating smooth transitions?",
+        "options": [
+          { "option": "animation", "isCorrect": false, "id": 0 },
+          { "option": "transition", "isCorrect": true, "id": 1 },
+          { "option": "transform", "isCorrect": false, "id": 2 },
+          { "option": "keyframes", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "transition"
+      },
+      {
+        "title": "css",
+        "questions": "What does the CSS property 'flex-direction' control?",
+        "options": [
+          { "option": "The direction of flex items", "isCorrect": true, "id": 0 },
+          { "option": "The size of flex items", "isCorrect": false, "id": 1 },
+          { "option": "The color of flex items", "isCorrect": false, "id": 2 },
+          { "option": "The position of flex items", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "The direction of flex items"
+      },
+      {
+        "title": "css",
+        "questions": "Which CSS unit is relative to the viewport width?",
+        "options": [
+          { "option": "em", "isCorrect": false, "id": 0 },
+          { "option": "rem", "isCorrect": false, "id": 1 },
+          { "option": "vw", "isCorrect": true, "id": 2 },
+          { "option": "px", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "vw"
+      },
+      {
+        "title": "css",
+        "questions": "What is the purpose of CSS custom properties (variables)?",
+        "options": [
+          { "option": "Storing reusable values", "isCorrect": true, "id": 0 },
+          { "option": "Creating animations", "isCorrect": false, "id": 1 },
+          { "option": "Defining colors", "isCorrect": false, "id": 2 },
+          { "option": "Setting fonts", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Storing reusable values"
+      },
+      {
+        "title": "css",
+        "questions": "Which CSS property is used for creating rounded corners?",
+        "options": [
+          { "option": "border-radius", "isCorrect": true, "id": 0 },
+          { "option": "border-style", "isCorrect": false, "id": 1 },
+          { "option": "border-width", "isCorrect": false, "id": 2 },
+          { "option": "border-color", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "border-radius"
+      },
+      {
+        "title": "css",
+        "questions": "What does the CSS property 'position: sticky' do?",
+        "options": [
+          { "option": "Keeps element fixed", "isCorrect": false, "id": 0 },
+          { "option": "Makes element stick when scrolling", "isCorrect": true, "id": 1 },
+          { "option": "Hides element", "isCorrect": false, "id": 2 },
+          { "option": "Moves element", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Makes element stick when scrolling"
+      },
+      {
+        "title": "css",
+        "questions": "Which CSS selector targets elements with a specific class?",
+        "options": [
+          { "option": "#", "isCorrect": false, "id": 0 },
+          { "option": ".", "isCorrect": true, "id": 1 },
+          { "option": "*", "isCorrect": false, "id": 2 },
+          { "option": "&", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "."
+      },
+      {
+        "title": "css",
+        "questions": "What is the purpose of CSS media queries?",
+        "options": [
+          { "option": "Responsive design", "isCorrect": true, "id": 0 },
+          { "option": "Adding colors", "isCorrect": false, "id": 1 },
+          { "option": "Creating animations", "isCorrect": false, "id": 2 },
+          { "option": "Setting fonts", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Responsive design"
+      },
+      {
+        "title": "css",
+        "questions": "Which CSS property is used for creating shadows?",
+        "options": [
+          { "option": "shadow", "isCorrect": false, "id": 0 },
+          { "option": "box-shadow", "isCorrect": true, "id": 1 },
+          { "option": "text-shadow", "isCorrect": false, "id": 2 },
+          { "option": "drop-shadow", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "box-shadow"
+      }
+    ]
+  },
+  {
+    "title": "javascript",
+    "questionArray": [
+      {
+        "title": "javascript",
+        "questions": "What is the difference between 'let' and 'const' in JavaScript?",
+        "options": [
+          { "option": "let is block-scoped, const is function-scoped", "isCorrect": false, "id": 0 },
+          { "option": "let can be reassigned, const cannot", "isCorrect": true, "id": 1 },
+          { "option": "let is for numbers, const is for strings", "isCorrect": false, "id": 2 },
+          { "option": "let is global, const is local", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "let can be reassigned, const cannot"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the purpose of the 'async/await' syntax?",
+        "options": [
+          { "option": "Handling asynchronous operations", "isCorrect": true, "id": 0 },
+          { "option": "Creating loops", "isCorrect": false, "id": 1 },
+          { "option": "Defining classes", "isCorrect": false, "id": 2 },
+          { "option": "Working with arrays", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Handling asynchronous operations"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is a closure in JavaScript?",
+        "options": [
+          { "option": "A function with access to variables in its outer scope", "isCorrect": true, "id": 0 },
+          { "option": "A way to close browser windows", "isCorrect": false, "id": 1 },
+          { "option": "A method to end loops", "isCorrect": false, "id": 2 },
+          { "option": "A type of array", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A function with access to variables in its outer scope"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the purpose of the 'map()' method in JavaScript?",
+        "options": [
+          { "option": "Creating new arrays by transforming elements", "isCorrect": true, "id": 0 },
+          { "option": "Finding elements in arrays", "isCorrect": false, "id": 1 },
+          { "option": "Sorting arrays", "isCorrect": false, "id": 2 },
+          { "option": "Filtering arrays", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Creating new arrays by transforming elements"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the difference between '==' and '===' in JavaScript?",
+        "options": [
+          { "option": "== checks value and type, === checks only value", "isCorrect": false, "id": 0 },
+          { "option": "== checks only value, === checks value and type", "isCorrect": true, "id": 1 },
+          { "option": "== is for numbers, === is for strings", "isCorrect": false, "id": 2 },
+          { "option": "== is deprecated, === is modern", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "== checks only value, === checks value and type"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the purpose of the 'Promise' object in JavaScript?",
+        "options": [
+          { "option": "Handling asynchronous operations", "isCorrect": true, "id": 0 },
+          { "option": "Creating objects", "isCorrect": false, "id": 1 },
+          { "option": "Defining functions", "isCorrect": false, "id": 2 },
+          { "option": "Working with arrays", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Handling asynchronous operations"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the purpose of the 'filter()' method in JavaScript?",
+        "options": [
+          { "option": "Creating new arrays with elements that pass a test", "isCorrect": true, "id": 0 },
+          { "option": "Finding the first element", "isCorrect": false, "id": 1 },
+          { "option": "Sorting arrays", "isCorrect": false, "id": 2 },
+          { "option": "Transforming elements", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Creating new arrays with elements that pass a test"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the purpose of the 'reduce()' method in JavaScript?",
+        "options": [
+          { "option": "Reducing array to a single value", "isCorrect": true, "id": 0 },
+          { "option": "Finding the minimum value", "isCorrect": false, "id": 1 },
+          { "option": "Counting elements", "isCorrect": false, "id": 2 },
+          { "option": "Removing duplicates", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Reducing array to a single value"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the purpose of the 'spread operator' (...) in JavaScript?",
+        "options": [
+          { "option": "Expanding arrays and objects", "isCorrect": true, "id": 0 },
+          { "option": "Creating copies", "isCorrect": false, "id": 1 },
+          { "option": "Merging objects", "isCorrect": false, "id": 2 },
+          { "option": "All of the above", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Expanding arrays and objects"
+      },
+      {
+        "title": "javascript",
+        "questions": "What is the purpose of the 'destructuring' syntax in JavaScript?",
+        "options": [
+          { "option": "Extracting values from arrays and objects", "isCorrect": true, "id": 0 },
+          { "option": "Creating new objects", "isCorrect": false, "id": 1 },
+          { "option": "Defining functions", "isCorrect": false, "id": 2 },
+          { "option": "Working with classes", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Extracting values from arrays and objects"
+      }
+    ]
+  },
+  {
+    "title": "react",
+    "questionArray": [
+      {
+        "title": "react",
+        "questions": "What is the purpose of React hooks?",
+        "options": [
+          { "option": "Using state and lifecycle in functional components", "isCorrect": true, "id": 0 },
+          { "option": "Creating custom components", "isCorrect": false, "id": 1 },
+          { "option": "Handling events", "isCorrect": false, "id": 2 },
+          { "option": "Styling components", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Using state and lifecycle in functional components"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of the 'useState' hook?",
+        "options": [
+          { "option": "Managing state in functional components", "isCorrect": true, "id": 0 },
+          { "option": "Handling side effects", "isCorrect": false, "id": 1 },
+          { "option": "Creating refs", "isCorrect": false, "id": 2 },
+          { "option": "Managing context", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Managing state in functional components"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of the 'useEffect' hook?",
+        "options": [
+          { "option": "Handling side effects in functional components", "isCorrect": true, "id": 0 },
+          { "option": "Managing state", "isCorrect": false, "id": 1 },
+          { "option": "Creating refs", "isCorrect": false, "id": 2 },
+          { "option": "Managing context", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Handling side effects in functional components"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of React Context?",
+        "options": [
+          { "option": "Sharing data between components without prop drilling", "isCorrect": true, "id": 0 },
+          { "option": "Managing state", "isCorrect": false, "id": 1 },
+          { "option": "Handling events", "isCorrect": false, "id": 2 },
+          { "option": "Styling components", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Sharing data between components without prop drilling"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of React Router?",
+        "options": [
+          { "option": "Handling navigation in React applications", "isCorrect": true, "id": 0 },
+          { "option": "Managing state", "isCorrect": false, "id": 1 },
+          { "option": "Handling API calls", "isCorrect": false, "id": 2 },
+          { "option": "Styling components", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Handling navigation in React applications"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of the 'key' prop in React?",
+        "option": [
+          { "option": "Helping React identify which items have changed", "isCorrect": true, "id": 0 },
+          { "option": "Styling components", "isCorrect": false, "id": 1 },
+          { "option": "Managing state", "isCorrect": false, "id": 2 },
+          { "option": "Handling events", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Helping React identify which items have changed"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of React.memo?",
+        "options": [
+          { "option": "Preventing unnecessary re-renders", "isCorrect": true, "id": 0 },
+          { "option": "Managing state", "isCorrect": false, "id": 1 },
+          { "option": "Handling events", "isCorrect": false, "id": 2 },
+          { "option": "Styling components", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Preventing unnecessary re-renders"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of the 'useRef' hook?",
+        "options": [
+          { "option": "Creating mutable references", "isCorrect": true, "id": 0 },
+          { "option": "Managing state", "isCorrect": false, "id": 1 },
+          { "option": "Handling side effects", "isCorrect": false, "id": 2 },
+          { "option": "Managing context", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Creating mutable references"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of React Portal?",
+        "options": [
+          { "option": "Rendering children into a DOM node outside parent hierarchy", "isCorrect": true, "id": 0 },
+          { "option": "Managing state", "isCorrect": false, "id": 1 },
+          { "option": "Handling events", "isCorrect": false, "id": 2 },
+          { "option": "Styling components", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Rendering children into a DOM node outside parent hierarchy"
+      },
+      {
+        "title": "react",
+        "questions": "What is the purpose of React Error Boundaries?",
+        "options": [
+          { "option": "Catching JavaScript errors in component trees", "isCorrect": true, "id": 0 },
+          { "option": "Managing state", "isCorrect": false, "id": 1 },
+          { "option": "Handling events", "isCorrect": false, "id": 2 },
+          { "option": "Styling components", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Catching JavaScript errors in component trees"
+      }
+    ]
+  },
+  {
+    "title": "redux",
+    "questionArray": [
+      {
+        "title": "redux",
+        "questions": "What is the purpose of Redux?",
+        "options": [
+          { "option": "Managing application state", "isCorrect": true, "id": 0 },
+          { "option": "Styling components", "isCorrect": false, "id": 1 },
+          { "option": "Handling API calls", "isCorrect": false, "id": 2 },
+          { "option": "Creating components", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Managing application state"
+      },
+      {
+        "title": "redux",
+        "questions": "What is a Redux store?",
+        "options": [
+          { "option": "A container that holds the application state", "isCorrect": true, "id": 0 },
+          { "option": "A database", "isCorrect": false, "id": 1 },
+          { "option": "A component", "isCorrect": false, "id": 2 },
+          { "option": "A function", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A container that holds the application state"
+      },
+      {
+        "title": "redux",
+        "questions": "What is a Redux action?",
+        "options": [
+          { "option": "A plain object describing what happened", "isCorrect": true, "id": 0 },
+          { "option": "A function", "isCorrect": false, "id": 1 },
+          { "option": "A component", "isCorrect": false, "id": 2 },
+          { "option": "A state", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A plain object describing what happened"
+      },
+      {
+        "title": "redux",
+        "questions": "What is a Redux reducer?",
+        "options": [
+          { "option": "A pure function that takes state and action, returns new state", "isCorrect": true, "id": 0 },
+          { "option": "A component", "isCorrect": false, "id": 1 },
+          { "option": "An action", "isCorrect": false, "id": 2 },
+          { "option": "A store", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A pure function that takes state and action, returns new state"
+      },
+      {
+        "title": "redux",
+        "questions": "What is Redux Toolkit?",
+        "options": [
+          { "option": "Official, opinionated toolset for efficient Redux development", "isCorrect": true, "id": 0 },
+          { "option": "A styling library", "isCorrect": false, "id": 1 },
+          { "option": "A testing framework", "isCorrect": false, "id": 2 },
+          { "option": "A routing library", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Official, opinionated toolset for efficient Redux development"
+      },
+      {
+        "title": "redux",
+        "questions": "What is the purpose of Redux middleware?",
+        "options": [
+          { "option": "Extending Redux with custom functionality", "isCorrect": true, "id": 0 },
+          { "option": "Styling components", "isCorrect": false, "id": 1 },
+          { "option": "Creating actions", "isCorrect": false, "id": 2 },
+          { "option": "Managing state", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Extending Redux with custom functionality"
+      },
+      {
+        "title": "redux",
+        "questions": "What is Redux Thunk?",
+        "options": [
+          { "option": "Middleware for handling async actions", "isCorrect": true, "id": 0 },
+          { "option": "A styling library", "isCorrect": false, "id": 1 },
+          { "option": "A testing framework", "isCorrect": false, "id": 2 },
+          { "option": "A routing library", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Middleware for handling async actions"
+      },
+      {
+        "title": "redux",
+        "questions": "What is the purpose of Redux DevTools?",
+        "options": [
+          { "option": "Debugging Redux applications", "isCorrect": true, "id": 0 },
+          { "option": "Styling components", "isCorrect": false, "id": 1 },
+          { "option": "Creating actions", "isCorrect": false, "id": 2 },
+          { "option": "Managing state", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Debugging Redux applications"
+      },
+      {
+        "title": "redux",
+        "questions": "What is Redux Saga?",
+        "options": [
+          { "option": "Middleware for managing side effects", "isCorrect": true, "id": 0 },
+          { "option": "A styling library", "isCorrect": false, "id": 1 },
+          { "option": "A testing framework", "isCorrect": false, "id": 2 },
+          { "option": "A routing library", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Middleware for managing side effects"
+      },
+      {
+        "title": "redux",
+        "questions": "What is the purpose of Redux Persist?",
+        "options": [
+          { "option": "Persisting Redux state to storage", "isCorrect": true, "id": 0 },
+          { "option": "Styling components", "isCorrect": false, "id": 1 },
+          { "option": "Creating actions", "isCorrect": false, "id": 2 },
+          { "option": "Managing state", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Persisting Redux state to storage"
+      }
+    ]
+  },
+  {
+    "title": "mongodb",
+    "questionArray": [
+      {
+        "title": "mongodb",
+        "questions": "What is MongoDB?",
+        "options": [
+          { "option": "A NoSQL document database", "isCorrect": true, "id": 0 },
+          { "option": "A relational database", "isCorrect": false, "id": 1 },
+          { "option": "A graph database", "isCorrect": false, "id": 2 },
+          { "option": "A key-value store", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A NoSQL document database"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is a MongoDB collection?",
+        "options": [
+          { "option": "A group of documents", "isCorrect": true, "id": 0 },
+          { "option": "A table", "isCorrect": false, "id": 1 },
+          { "option": "A database", "isCorrect": false, "id": 2 },
+          { "option": "A field", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A group of documents"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is a MongoDB document?",
+        "options": [
+          { "option": "A JSON-like object", "isCorrect": true, "id": 0 },
+          { "option": "A table row", "isCorrect": false, "id": 1 },
+          { "option": "A database", "isCorrect": false, "id": 2 },
+          { "option": "A field", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "A JSON-like object"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is the purpose of MongoDB indexes?",
+        "options": [
+          { "option": "Improving query performance", "isCorrect": true, "id": 0 },
+          { "option": "Storing data", "isCorrect": false, "id": 1 },
+          { "option": "Creating collections", "isCorrect": false, "id": 2 },
+          { "option": "Defining schemas", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Improving query performance"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is MongoDB Atlas?",
+        "options": [
+          { "option": "Cloud database service for MongoDB", "isCorrect": true, "id": 0 },
+          { "option": "A desktop application", "isCorrect": false, "id": 1 },
+          { "option": "A programming language", "isCorrect": false, "id": 2 },
+          { "option": "A web framework", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Cloud database service for MongoDB"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is the purpose of MongoDB aggregation?",
+        "options": [
+          { "option": "Processing data records and returning computed results", "isCorrect": true, "id": 0 },
+          { "option": "Storing data", "isCorrect": false, "id": 1 },
+          { "option": "Creating collections", "isCorrect": false, "id": 2 },
+          { "option": "Defining schemas", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Processing data records and returning computed results"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is MongoDB Compass?",
+        "options": [
+          { "option": "GUI for MongoDB", "isCorrect": true, "id": 0 },
+          { "option": "A database", "isCorrect": false, "id": 1 },
+          { "option": "A programming language", "isCorrect": false, "id": 2 },
+          { "option": "A web framework", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "GUI for MongoDB"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is the purpose of MongoDB sharding?",
+        "options": [
+          { "option": "Distributing data across multiple machines", "isCorrect": true, "id": 0 },
+          { "option": "Storing data", "isCorrect": false, "id": 1 },
+          { "option": "Creating collections", "isCorrect": false, "id": 2 },
+          { "option": "Defining schemas", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Distributing data across multiple machines"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is MongoDB replication?",
+        "option": [
+          { "option": "Maintaining multiple copies of data", "isCorrect": true, "id": 0 },
+          { "option": "Storing data", "isCorrect": false, "id": 1 },
+          { "option": "Creating collections", "isCorrect": false, "id": 2 },
+          { "option": "Defining schemas", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Maintaining multiple copies of data"
+      },
+      {
+        "title": "mongodb",
+        "questions": "What is the purpose of MongoDB GridFS?",
+        "options": [
+          { "option": "Storing files larger than 16MB", "isCorrect": true, "id": 0 },
+          { "option": "Storing data", "isCorrect": false, "id": 1 },
+          { "option": "Creating collections", "isCorrect": false, "id": 2 },
+          { "option": "Defining schemas", "isCorrect": false, "id": 3 }
+        ],
+        "correctAnswer": "Storing files larger than 16MB"
+      }
+    ]
+  }
+]
