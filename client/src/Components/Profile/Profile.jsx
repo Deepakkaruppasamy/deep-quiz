@@ -237,8 +237,9 @@ export const Profile = () => {
                 <div className="mb-4">
                   <h3 className="text-lg font-semibold text-gray-700 mb-2">Badges Earned:</h3>
                   <div className="flex flex-wrap">
-                    {badges.map((badge) => badgeIcons[badge] || badge)
-                    }
+                    {badges.map((badge, idx) => (
+                      <span key={badge + idx}>{badgeIcons[badge] || badge}</span>
+                    ))}
                   </div>
                 </div>
               )}
@@ -367,7 +368,7 @@ export const Profile = () => {
               </thead>
               <tbody>
                 {quizAttempts.map((a, idx) => (
-                  <tr key={idx} className="border-t">
+                  <tr key={a.quizId || idx} className="border-t">
                     <td className="py-2 px-4">{a.quizId}</td>
                     <td className="py-2 px-4">{Array.isArray(a.quizResult) ? a.quizResult.filter(x => x).length : ''}</td>
                   </tr>

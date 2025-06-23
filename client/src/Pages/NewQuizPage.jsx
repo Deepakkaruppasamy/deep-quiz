@@ -20,16 +20,15 @@ export const NewQuizPage = () => {
 
   // ------taking path from window object and compairing with the backend data
 
-  const pathname = window.location.pathname
-    .split("")
-    .splice(1, window.location.pathname.length)
-    .join("");
+  // Get the topic from the path, e.g., '/quiz/html' => 'html'
+  const topicFromPath = window.location.pathname.split('/').pop().toLowerCase();
 
   const filtertopicwise = data.filter((el) => {
-    return pathname === el.title;
+    return el.title && el.title.toLowerCase() === topicFromPath;
   });
 
-  const newfilterquestions = filtertopicwise[0]?.questions;
+  // Use questionArray for quiz questions
+  const newfilterquestions = filtertopicwise[0]?.questionArray;
   const dispatch = useDispatch();
 
   const fetchQuizData = () => {
@@ -75,42 +74,46 @@ export const NewQuizPage = () => {
         <h1 className="text-xl font-bold">Count:{count}</h1>
       </div>
       <div className="mt-20">
-        {newfilterquestions?.map((el, index) => {
-          return (
-            <div>
-              <div className="flex  w-12/12  pl-1 pt-2 pb-2 mt-2   mr-4">
-                <div className="border-red-700 w-11/12 border-grey-200 border-2 pl-1 ml-24 ">
-                  <div className="flex w-11/12">
-                    <div className="w-40">
-                      <p className="text-xl font-normal  pl-1">
-                        Question {index + 1})
-                      </p>
-                    </div>
-                    <div className="w-10/12 -ml-10">
-                      <p className="text-xl font-normal  ">{el.que}</p>
-                    </div>
-                  </div>
-                  {el?.answer[0]?.map((e, index) => {
-                    return (
-                      <div className="flex ml-32">
-                        <p className="mr-2">{index + 1})</p>
-                        <div
-                          className="cursor-pointer hoverOption"
-                          onClick={() => handleAnswer(index, e, el)}
-                        >
-                          <li className="text-xl li-option-tag">{e}</li>
-                          {/* onClick={()=>{handlecount(index)}} */}
-                        </div>
+        {newfilterquestions && newfilterquestions.length > 0 ? (
+          newfilterquestions.map((el, index) => {
+            return (
+              <div key={index}>
+                <div className="flex  w-12/12  pl-1 pt-2 pb-2 mt-2   mr-4">
+                  <div className="border-red-700 w-11/12 border-grey-200 border-2 pl-1 ml-24 ">
+                    <div className="flex w-11/12">
+                      <div className="w-40">
+                        <p className="text-xl font-normal  pl-1">
+                          Question {index + 1})
+                        </p>
                       </div>
-                    );
-                  })}
+                      <div className="w-10/12 -ml-10">
+                        <p className="text-xl font-normal  ">{el.que}</p>
+                      </div>
+                    </div>
+                    {el?.answer?.[0]?.map((e, idx) => {
+                      return (
+                        <div className="flex ml-32" key={idx}>
+                          <p className="mr-2">{idx + 1})</p>
+                          <div
+                            className="cursor-pointer hoverOption"
+                            onClick={() => handleAnswer(idx, e, el)}
+                          >
+                            <li className="text-xl li-option-tag">{e}</li>
+                            {/* onClick={()=>{handlecount(index)}} */}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        ) : (
+          <div className="text-center text-red-600 text-xl mt-20">No quiz found for this topic.</div>
+        )}
       </div>
-      {quizStarted && (
+      {quizStarted && newfilterquestions && newfilterquestions.length > 0 && (
         <Quiz questionArr={newfilterquestions} timerPerQuestion={timerPerQuestion} />
       )}
     </div>
