@@ -10,17 +10,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const loginAuth=require("./controller/auth.controller.js")
 app.use("/",loginAuth)
-const RegisterAuth=require("./controller/auth.controller.js")
-app.use("/",RegisterAuth)
 
 const quizAdd=require("./controller/quizAdd.controller.js")
 app.use("/admin",quizAdd)
+app.use("/api/quiz", quizAdd)
 
-const quiz=require("./controller/displayQuiz.controller.js")
-app.use("/quiz",quiz)
-
-const getquiz = require("./controller/quizAdd.controller.js")
-app.use("/quiz",getquiz)
+const displayQuiz=require("./controller/displayQuiz.controller.js")
+app.use("/quiz",displayQuiz)
 
 const user=require("./controller/auth.controller.js")
 app.use("/user",user)
@@ -45,7 +41,7 @@ app.listen(Port,async function(){
         await connect();
            console.log(`Listening on ${Port}` )
     } catch (error) {
-         console.log(err)
+         console.log(error)
     }
 })
 
