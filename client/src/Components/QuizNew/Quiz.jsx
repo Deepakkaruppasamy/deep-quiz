@@ -101,26 +101,6 @@ export const Quiz = (props) => {
     };
   }, []);
 
-  // Require fullscreen mode
-  // useEffect(() => {
-  //   const enterFullscreen = () => {
-  //     const el = quizContainerRef.current;
-  //     if (el && el.requestFullscreen) el.requestFullscreen();
-  //     else if (el && el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-  //     else if (el && el.mozRequestFullScreen) el.mozRequestFullScreen();
-  //     else if (el && el.msRequestFullscreen) el.msRequestFullscreen();
-  //   };
-  //   setTimeout(enterFullscreen, 500);
-  //   const onFullscreenChange = () => {
-  //     if (!document.fullscreenElement) {
-  //       alert('You must stay in fullscreen during the quiz!');
-  //       // Optionally: auto-submit or end quiz here
-  //     }
-  //   };
-  //   document.addEventListener('fullscreenchange', onFullscreenChange);
-  //   return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
-  // }, []);
-
   // Add a function to request fullscreen on user gesture
   const handleEnterFullscreen = () => {
     const el = quizContainerRef.current;
