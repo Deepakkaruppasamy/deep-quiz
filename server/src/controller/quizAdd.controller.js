@@ -11,12 +11,16 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:value", async (req, res) => {
+router.get("/:topic", async (req, res) => {
   try {
-    const Data = await PostQuiz.find({ title: req.params.value });
-    res.status(200).json(Data);
+    const topic = req.params.topic;
+    const quizzes = await PostQuiz.find({ title: { $regex: new RegExp(`^${topic}$`, 'i') } });
+    if (!quizzes || quizzes.length === 0) {
+      return res.status(404).json({ message: 'Quiz not found' });
+    }
+    res.status(200).json(quizzes);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(400).json({ error: err.message });
   }
 });
 

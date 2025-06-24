@@ -36,6 +36,21 @@ app.use("/certificate", certificateController)
 const chatbotController = require("./controller/chatbot.controller.js");
 app.use("/chatbot", chatbotController);
 
+const Postquiz = require("../model/quizdata.model.js");
+
+// Get quiz by topic (e.g., /quiz/redux)
+app.get("/quiz/:topic", async (req, res) => {
+  try {
+    const topic = req.params.topic;
+    // Find quiz by title (case-insensitive)
+    const quiz = await Postquiz.findOne({ title: new RegExp(topic, "i") }).lean().exec();
+    if (!quiz) return res.status(404).send("Quiz not found");
+    res.send(quiz);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+});
+
 app.listen(Port,async function(){
     try {
         await connect();
