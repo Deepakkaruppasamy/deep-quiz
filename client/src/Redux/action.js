@@ -62,13 +62,6 @@ export const loginUser = (payload) => {
   };
 };
 
-export const loginUserEmail = (payload) => {
-  return {
-    type: types.GETUSEREMAIL,
-    payload,
-  };
-};
-
 export const Logouthandleraction = (payload) => {
   return {
     type: types.LOGOUTUSER,
@@ -117,7 +110,7 @@ const getAllUserDataFailure = (payload) => {
 export const getAllUserDataFromBackend = (payload) => (dispatch) => {
   dispatch(getAllUserDataRequest());
   axios
-    .get("https://deep-quiz-5.onrender.com/getuser")
+    .get("https://mern-quiz-server-sudhir.onrender.com/getuser")
     .then((res) => {
       dispatch(getAllUserDataSuccess(res.data));
     })
@@ -128,7 +121,7 @@ export const getAllUserDataFromBackend = (payload) => (dispatch) => {
 
 export const deleteUserByAdmin = (payload) => (dispatch) => {
   axios
-    .delete(`https://deep-quiz-5.onrender.com/${payload}`)
+    .delete(`https://mern-quiz-server-sudhir.onrender.com/${payload}`)
     .then((response) => {
       dispatch(getAllUserDataFromBackend());
     })
@@ -141,7 +134,7 @@ export const deleteUserByAdmin = (payload) => (dispatch) => {
 
 export const postQuizObj = (obj) => (dispatch) => {
   axios
-    .post("https://deep-quiz-5.onrender.com/admin", obj)
+    .post("https://mern-quiz-server-sudhir.onrender.com/admin", obj)
     .then((res) => {
      
     })
@@ -152,17 +145,34 @@ export const postQuizObj = (obj) => (dispatch) => {
 
 // ----------------------------- fetching quiz data subject wise -------------
 
+const fetchQuizRequest = (payload) => {
+  return {
+    type: types.FETCH_QUIZ_REQUEST,
+    payload,
+  };
+};
+const fetchQuizSuccess = (payload) => {
+  return {
+    type: types.FETCH_QUIZ_SUCCESS,
+    payload,
+  };
+};
+const fetchQuizFailure = (payload) => {
+  return {
+    type: types.FETCH_QUIZ_FAILURE,
+    payload,
+  };
+};
 export const fetchQuizDataFrombackend = () => (dispatch) => {
-  dispatch(fetchQuizRequest());
   axios
-    .get("https://deep-quiz-5.onrender.com/api/quiz")
+    .get("https://mern-quiz-server-sudhir.onrender.com/api/quiz")
     .then((res) => dispatch(fetchQuizSuccess(res.data)))
-    .catch((err) => dispatch(fetchQuizFailure(err)));
+    .catch((err) => console.log(err));
 };
 
 export const getQuiz = (params) => (dispatch) => {
   axios
-    .get(`https://deep-quiz-5.onrender.com/quiz/${params.id}`)
+    .get(`https://mern-quiz-server-sudhir.onrender.com/quiz/${params.id}`)
     .then((res) => {
     
       dispatch(fetchQuizSuccess(res.data));
@@ -171,6 +181,9 @@ export const getQuiz = (params) => (dispatch) => {
     });
 };
 
+//------------posting the user quiz result ------------
+
+//  -----------posting user result ------------
 
 export const postUserResult = (ans) => {
   return {
@@ -203,7 +216,7 @@ export const postQuizResult = (obj) => (dispatch) => {
   const { quizId, userId, quizResult } = obj;
   dispatch(postUserResultRequest());
   axios
-    .post(`https://deep-quiz-5.onrender.com/userResult/${userId}`, obj)
+    .post(`https://mern-quiz-server-sudhir.onrender.com/userResult/${userId}`, obj)
     .then((res) => {
       dispatch(postUserResultSuccess(res.data));
     })
@@ -212,14 +225,9 @@ export const postQuizResult = (obj) => (dispatch) => {
     });
 };
 
-const fetchQuizRequest = () => ({
-  type: types.FETCH_QUIZ_REQUEST,
-});
-const fetchQuizSuccess = (payload) => ({
-  type: types.FETCH_QUIZ_SUCCESS,
-  payload,
-});
-const fetchQuizFailure = (error) => ({
-  type: types.FETCH_QUIZ_FAILURE,
-  payload: error,
-});
+export const loginUserEmail = (payload) => {
+  return {
+    type: types.GETUSEREMAIL,
+    payload,
+  };
+};
