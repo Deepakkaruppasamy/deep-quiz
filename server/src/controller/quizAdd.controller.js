@@ -11,6 +11,17 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Get all quizzes (MUST be before /:topic)
+router.get("/", async (req, res) => {
+  try {
+    const quizzes = await PostQuiz.find();
+    res.status(200).json(quizzes);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// Get quiz by topic (case-insensitive)
 router.get("/:topic", async (req, res) => {
   try {
     const topic = req.params.topic;
@@ -21,16 +32,6 @@ router.get("/:topic", async (req, res) => {
     res.status(200).json(quizzes);
   } catch (err) {
     res.status(400).json({ error: err.message });
-  }
-});
-
-// Get all quizzes
-router.get("/", async (req, res) => {
-  try {
-    const quizzes = await PostQuiz.find();
-    res.status(200).json(quizzes);
-  } catch (err) {
-    res.status(400).json(err);
   }
 });
 
