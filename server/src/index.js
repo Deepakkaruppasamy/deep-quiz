@@ -1,63 +1,50 @@
-const express=require('express');
-const connect=require("./configs/db.js")
+const express = require('express');
+const connect = require("./configs/db.js");
 const bodyParser = require("body-parser");
-const Port = process.env.PORT || 3755
-var cors = require('cors')
-const app=express();
+const Port = process.env.PORT || 3755;
+const cors = require('cors');
+const app = express();
+
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-const loginAuth=require("./controller/auth.controller.js")
-app.use("/",loginAuth)
 
-const quizAdd=require("./controller/quizAdd.controller.js")
-app.use("/admin",quizAdd)
-app.use("/api/quiz", quizAdd)
+const loginAuth = require("./controller/auth.controller.js");
+app.use("/", loginAuth);
 
-const displayQuiz=require("./controller/displayQuiz.controller.js")
-app.use("/quiz",displayQuiz)
+const quizAdd = require("./controller/quizAdd.controller.js");
+app.use("/admin", quizAdd);
+app.use("/api/quiz", quizAdd);
 
-const user=require("./controller/auth.controller.js")
-app.use("/user",user)
+const displayQuiz = require("./controller/displayQuiz.controller.js");
+app.use("/quiz", displayQuiz);
 
-const userResult=require("./controller/userData.controller.js")
-app.use("/userResult",userResult)
+const user = require("./controller/auth.controller.js");
+app.use("/user", user);
 
-const contactController = require("./controller/contact.controller.js")
-app.use("/contact", contactController)
+const userResult = require("./controller/userData.controller.js");
+app.use("/userResult", userResult);
 
-const feedbackController = require("./controller/feedback.controller.js")
-app.use("/feedback", feedbackController)
+const contactController = require("./controller/contact.controller.js");
+app.use("/contact", contactController);
 
-const certificateController = require("./controller/certificate.controller.js")
-app.use("/certificate", certificateController)
+const feedbackController = require("./controller/feedback.controller.js");
+app.use("/feedback", feedbackController);
+
+const certificateController = require("./controller/certificate.controller.js");
+app.use("/certificate", certificateController);
 
 const chatbotController = require("./controller/chatbot.controller.js");
 app.use("/chatbot", chatbotController);
 
-const Postquiz = require("../model/quizdata.model.js");
-
-// Get quiz by topic (e.g., /quiz/redux)
-app.get("/quiz/:topic", async (req, res) => {
-  try {
-    const topic = req.params.topic;
-    // Find quiz by title (case-insensitive)
-    const quiz = await Postquiz.findOne({ title: new RegExp(topic, "i") }).lean().exec();
-    if (!quiz) return res.status(404).send("Quiz not found");
-    res.send(quiz);
-  } catch (err) {
-    res.status(500).send(err.message);
-  }
-});
-
-app.listen(Port,async function(){
+app.listen(Port, async function () {
     try {
         await connect();
-           console.log(`Listening on ${Port}` )
+        console.log(`Listening on ${Port}`);
     } catch (error) {
-         console.log(error)
+        console.log(error);
     }
-})
+});
 
 
