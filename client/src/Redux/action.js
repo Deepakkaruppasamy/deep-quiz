@@ -141,7 +141,7 @@ export const deleteUserByAdmin = (payload) => (dispatch) => {
 
 export const postQuizObj = (obj) => (dispatch) => {
   axios
-    .post("https://mern-quiz-server-sudhir.onrender.com/admin", obj)
+    .post("https://deep-quiz-3.onrender.com/admin", obj)
     .then((res) => {
      
     })
