@@ -1,6 +1,7 @@
 const express=require("express")
 const User = require("../model/auth.model.js")
 const router =express.Router()
+const path = require('path');
 
 const Postquiz=require("../model/quizdata.model.js")
 
