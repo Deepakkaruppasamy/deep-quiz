@@ -35,7 +35,7 @@ export const Resultshow = () => {
   const handleDownloadCertificate = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3755/certificate",
+        "https://deep-quiz-6.onrender.com/certificate",
         {
           name: UserName,
           course: singleQuiz[0]?.title || "Quiz",

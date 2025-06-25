@@ -22,7 +22,7 @@ const ChatbotWidget = () => {
     setMessages((msgs) => [...msgs, userMsg]);
     setInput("");
     try {
-      const res = await axios.post("http://localhost:3755/chatbot", { question: userMsg.text });
+      const res = await axios.post("https://deep-quiz-6.onrender.com/chatbot", { question: userMsg.text });
       setMessages((msgs) => [...msgs, { from: "bot", text: res.data.answer }]);
     } catch {
       setMessages((msgs) => [...msgs, { from: "bot", text: "Sorry, I couldn't get an answer right now." }]);

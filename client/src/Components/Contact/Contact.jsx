@@ -24,7 +24,7 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await axios.post("http://localhost:3755/contact", formData);
+      await axios.post("https://deep-quiz-6.onrender.com/contact", formData);
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (err) {

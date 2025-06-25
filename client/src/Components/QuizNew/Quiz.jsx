@@ -124,7 +124,7 @@ export const Quiz = (props) => {
         userId: userID,
         quizResult: [...ans, selectedOption],
       };
-      axios.post(`http://localhost:3755/userResult/${userID}`, obj)
+      axios.post(`https://deep-quiz-6.onrender.com/userResult/${userID}`, obj)
         .then(response => {
           console.log("Quiz result posted successfully:", response.data);
           setShowConfetti(true);

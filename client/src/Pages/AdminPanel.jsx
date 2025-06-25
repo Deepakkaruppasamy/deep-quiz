@@ -33,7 +33,7 @@ export default function AdminPanel() {
   useEffect(() => {
     if (activeTab === "Quizzes") {
       setLoading(true);
-      axios.get("http://localhost:3755/admin/")
+      axios.get("https://deep-quiz-6.onrender.com/admin/")
         .then(res => setQuizzes(res.data))
         .catch(() => setQuizzes([]))
         .finally(() => setLoading(false));
@@ -43,7 +43,7 @@ export default function AdminPanel() {
   // Fetch user count for dashboard
   useEffect(() => {
     if (activeTab === "Dashboard") {
-      axios.get("http://localhost:3755/getuser")
+      axios.get("https://deep-quiz-6.onrender.com/getuser")
         .then(res => setUserCount(res.data.length))
         .catch(() => setUserCount(0));
     }
@@ -52,7 +52,7 @@ export default function AdminPanel() {
   // Delete quiz
   const handleDeleteQuiz = async (id) => {
     if (window.confirm("Are you sure you want to delete this quiz?")) {
-      await axios.delete(`http://localhost:3755/admin/${id}`);
+      await axios.delete(`https://deep-quiz-6.onrender.com/admin/${id}`);
       setQuizzes(quizzes.filter(q => q._id !== id));
     }
   };
@@ -84,10 +84,10 @@ export default function AdminPanel() {
     e.preventDefault();
     if (editQuiz) {
       // Edit existing quiz
-      await axios.put(`http://localhost:3755/admin/${editQuiz._id}`, quizForm);
+      await axios.put(`https://deep-quiz-6.onrender.com/admin/${editQuiz._id}`, quizForm);
     } else {
       // Add new quiz
-      await axios.post("http://localhost:3755/admin/", quizForm);
+      await axios.post("https://deep-quiz-6.onrender.com/admin/", quizForm);
     }
     setShowQuizModal(false);
   };
@@ -194,13 +194,13 @@ export default function AdminPanel() {
 
   useEffect(() => {
     if (activeTab === "Feedback") {
-      axios.get("http://localhost:3755/feedback/all").then(res => setFeedbacks(res.data));
+      axios.get("https://deep-quiz-6.onrender.com/feedback/all").then(res => setFeedbacks(res.data));
     }
     if (activeTab === "Contact") {
-      axios.get("http://localhost:3755/contact/all").then(res => setContacts(res.data));
+      axios.get("https://deep-quiz-6.onrender.com/contact/all").then(res => setContacts(res.data));
     }
     if (activeTab === "Signup/Attempts") {
-      axios.get("http://localhost:3755/getuser").then(res => setUsers(res.data));
+      axios.get("https://deep-quiz-6.onrender.com/getuser").then(res => setUsers(res.data));
     }
   }, [activeTab]);
 
