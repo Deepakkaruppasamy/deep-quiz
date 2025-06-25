@@ -1,4 +1,3 @@
-
 const express=require("express")
 const User = require("../model/auth.model.js")
 const router =express.Router()
@@ -13,5 +12,17 @@ res.send(Postquizdata)
 return res.status(500).send(err.message)
     }
 })
+
+router.get('/:slug', async (req, res) => {
+    try {
+        const quiz = await Postquiz.findOne({ slug: req.params.slug }).lean().exec();
+        if (!quiz) {
+            return res.status(404).send({ message: "Quiz not found" });
+        }
+        res.send(quiz);
+    } catch (err) {
+        return res.status(500).send(err.message);
+    }
+});
 
 module.exports = router
