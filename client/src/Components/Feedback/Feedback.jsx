@@ -43,7 +43,7 @@ export const Feedback = () => {
     }
     setIsSubmitting(true);
     try {
-      await axios.post("http://localhost:3755/feedback", {
+      await axios.post("https://deep-quiz-6.onrender.com/feedback", {
         name: formData.name,
         email: formData.email,
         subject: formData.subject,

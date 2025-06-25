@@ -30,7 +30,7 @@ export const Profile = () => {
       // Fetch user's profile image from backend
       const fetchProfileImage = async () => {
         try {
-          const response = await axios.get(`http://localhost:3755/get-user-profile?email=${userEmail}`);
+          const response = await axios.get(`https://deep-quiz-6.onrender.com/get-user-profile?email=${userEmail}`);
           if (response.data.profileImage) {
             setProfileImage(response.data.profileImage);
           }
@@ -51,7 +51,7 @@ export const Profile = () => {
   useEffect(() => {
     // Fetch user's quiz attempts
     if (userEmail) {
-      axios.get('http://localhost:3755/getuser')
+      axios.get('https://deep-quiz-6.onrender.com/getuser')
         .then(res => {
           const user = res.data.find(u => u.email === userEmail);
           setQuizAttempts(user?.quizAttempted || []);
@@ -108,7 +108,7 @@ export const Profile = () => {
       // Convert image to base64 for storage
       const base64Image = profileImage;
       
-      const response = await axios.put("http://localhost:3755/update-profile-image", {
+      const response = await axios.put("https://deep-quiz-6.onrender.com/update-profile-image", {
         email: userEmail,
         profileImage: base64Image
       });

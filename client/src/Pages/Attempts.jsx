@@ -13,7 +13,7 @@ export default function Attempts() {
       navigate("/login");
       return;
     }
-    axios.get("http://localhost:3755/getuser")
+    axios.get("https://deep-quiz-6.onrender.com/getuser")
       .then(res => {
         // Flatten all attempts for all users
         const allAttempts = [];

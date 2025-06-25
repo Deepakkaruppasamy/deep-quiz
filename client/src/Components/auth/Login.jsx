@@ -40,7 +40,7 @@ export const Login = () => {
       return;
     }
     axios
-      .post("http://localhost:3755/login", user)
+      .post("https://deep-quiz-6.onrender.com/login", user)
       .then((res) => {
         if (res.data.user && res.data.user._id) {
           dispatch(loginUser(res.data.user._id));

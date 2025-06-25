@@ -17,7 +17,7 @@ export const Register = () => {
     const { name, email, password, reEnterPassword } = user;
     if (name && email && password && password === reEnterPassword) {
       axios
-        .post("http://localhost:3755/register", user)
+        .post("https://deep-quiz-6.onrender.com/register", user)
         .then((res) => {
           toast("Successfully Registered", {
             type: "success",
@@ -42,7 +42,7 @@ export const Register = () => {
     const { name, email, password, reEnterPassword } = user;
     if (name && email && password && password === reEnterPassword) {
       axios
-        .post("http://localhost:3755/register", { ...user, isAdmin: true })
+        .post("https://deep-quiz-6.onrender.com/register", { ...user, isAdmin: true })
         .then((res) => {
           toast("Admin Registered!", { type: "success" });
           setTimeout(() => {

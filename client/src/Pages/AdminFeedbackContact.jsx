@@ -6,8 +6,8 @@ const AdminFeedbackContact = () => {
   const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3755/contact/all").then(res => setContacts(res.data));
-    axios.get("http://localhost:3755/feedback/all").then(res => setFeedbacks(res.data));
+    axios.get("https://deep-quiz-6.onrender.com/contact/all").then(res => setContacts(res.data));
+    axios.get("https://deep-quiz-6.onrender.com/feedback/all").then(res => setFeedbacks(res.data));
   }, []);
 
   return (

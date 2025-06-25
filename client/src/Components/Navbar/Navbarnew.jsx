@@ -23,7 +23,7 @@ export const Navbarnew = () => {
     if (userEmail) {
       const fetchProfileImage = async () => {
         try {
-          const response = await axios.get(`http://localhost:3755/get-user-profile?email=${userEmail}`);
+          const response = await axios.get(`https://deep-quiz-6.onrender.com/get-user-profile?email=${userEmail}`);
           if (response.data.profileImage) {
             setProfileImage(response.data.profileImage);
           }
