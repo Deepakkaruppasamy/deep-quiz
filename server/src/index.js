@@ -45,6 +45,14 @@ app.use("/certificate", certificateController);
 const chatbotController = require("./controller/chatbot.controller.js");
 app.use("/chatbot", chatbotController);
 
+// Serve React app for all other routes
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'client', 'dist'))); // or 'build' if using create-react-app
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+});
+
 app.listen(Port, async function () {
     try {
         await connect();
