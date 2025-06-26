@@ -22,7 +22,6 @@ app.use("/", loginAuth);
 
 const quizAdd = require("./controller/quizAdd.controller.js");
 app.use("/admin", quizAdd);
-app.use("/api/quiz", quizAdd);
 
 const displayQuiz = require("./controller/displayQuiz.controller.js");
 app.use("/quiz", displayQuiz);
