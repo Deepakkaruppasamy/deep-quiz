@@ -110,7 +110,7 @@ const getAllUserDataFailure = (payload) => {
 export const getAllUserDataFromBackend = (payload) => (dispatch) => {
   dispatch(getAllUserDataRequest());
   axios
-    .get("https://deep-quiz-9.onrender.com/getuser")
+    .get("https://deep-quiz-6.onrender.com/getuser")
     .then((res) => {
       dispatch(getAllUserDataSuccess(res.data));
     })
@@ -121,7 +121,7 @@ export const getAllUserDataFromBackend = (payload) => (dispatch) => {
 
 export const deleteUserByAdmin = (payload) => (dispatch) => {
   axios
-    .delete(`https://deep-quiz-9.onrender.com/${payload}`)
+    .delete(`https://deep-quiz-6.onrender.com/${payload}`)
     .then((response) => {
       dispatch(getAllUserDataFromBackend());
     })
@@ -134,7 +134,7 @@ export const deleteUserByAdmin = (payload) => (dispatch) => {
 
 export const postQuizObj = (obj) => (dispatch) => {
   axios
-    .post("https://deep-quiz-9.onrender.com/admin", obj)
+    .post("https://deep-quiz-6.onrender.com/admin", obj)
     .then((res) => {
      
     })
@@ -165,14 +165,14 @@ const fetchQuizFailure = (payload) => {
 };
 export const fetchQuizDataFrombackend = () => (dispatch) => {
   axios
-    .get("https://deep-quiz-9.onrender.com/api/quiz")
+    .get("https://deep-quiz-6.onrender.com/api/quiz")
     .then((res) => dispatch(fetchQuizSuccess(res.data)))
     .catch((err) => console.log(err));
 };
 
 export const getQuiz = (params) => (dispatch) => {
   axios
-    .get(`https://deep-quiz-9.onrender.com/quiz/${params.id}`)
+    .get(`https://deep-quiz-6.onrender.com/quiz/${params.id}`)
     .then((res) => {
     
       dispatch(fetchQuizSuccess(res.data));
@@ -216,7 +216,7 @@ export const postQuizResult = (obj) => (dispatch) => {
   const { quizId, userId, quizResult } = obj;
   dispatch(postUserResultRequest());
   axios
-    .post(`https://deep-quiz-9.onrender.com/userResult/${userId}`, obj)
+    .post(`https://deep-quiz-6.onrender.com/userResult/${userId}`, obj)
     .then((res) => {
       dispatch(postUserResultSuccess(res.data));
     })

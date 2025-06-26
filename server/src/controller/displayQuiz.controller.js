@@ -14,9 +14,9 @@ return res.status(500).send(err.message)
     }
 })
 
-router.get('/:slug', async (req, res) => {
+router.get('/:topic', async (req, res) => {
     try {
-        const quiz = await Postquiz.findOne({ slug: req.params.slug }).lean().exec();
+        const quiz = await Postquiz.findOne({ topic: req.params.topic }).lean().exec();
         if (!quiz) {
             return res.status(404).send({ message: "Quiz not found" });
         }
