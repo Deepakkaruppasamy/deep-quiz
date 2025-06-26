@@ -1,6 +1,7 @@
 const express=require("express")
 const User = require("../model/auth.model.js")
 const router =express.Router()
+const path = require('path');
 
 const Postquiz=require("../model/quizdata.model.js")
 
@@ -13,9 +14,9 @@ return res.status(500).send(err.message)
     }
 })
 
-router.get('/:slug', async (req, res) => {
+router.get('/:topic', async (req, res) => {
     try {
-        const quiz = await Postquiz.findOne({ slug: req.params.slug }).lean().exec();
+        const quiz = await Postquiz.findOne({ topic: req.params.topic }).lean().exec();
         if (!quiz) {
             return res.status(404).send({ message: "Quiz not found" });
         }

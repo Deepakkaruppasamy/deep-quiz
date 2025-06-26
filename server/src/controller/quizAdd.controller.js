@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const PostQuiz = require("../model/quizdata.model.js");
 
+// Create a new quiz
 router.post("/", async (req, res) => {
   try {
     const data = await PostQuiz.create(req.body);
@@ -11,7 +12,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Get all quizzes (MUST be before /:topic)
+// Get all quizzes
 router.get("/", async (req, res) => {
   try {
     const quizzes = await PostQuiz.find();
@@ -22,7 +23,7 @@ router.get("/", async (req, res) => {
 });
 
 // Get quiz by topic (case-insensitive)
-router.get("/:topic", async (req, res) => {
+router.get("/topic/:topic", async (req, res) => {
   try {
     const topic = req.params.topic;
     const quizzes = await PostQuiz.find({ title: { $regex: new RegExp(`^${topic}$`, 'i') } });
@@ -59,7 +60,7 @@ router.delete("/:id", async (req, res) => {
 router.post('/:id/question', async (req, res) => {
   try {
     const quiz = await PostQuiz.findById(req.params.id);
-    quiz.questionArray.push(req.body);
+    quiz.questions.push(req.body);
     await quiz.save();
     res.status(200).json(quiz);
   } catch (err) {
@@ -71,7 +72,7 @@ router.post('/:id/question', async (req, res) => {
 router.put('/:id/question/:qidx', async (req, res) => {
   try {
     const quiz = await PostQuiz.findById(req.params.id);
-    quiz.questionArray[req.params.qidx] = req.body;
+    quiz.questions[req.params.qidx] = req.body;
     await quiz.save();
     res.status(200).json(quiz);
   } catch (err) {
@@ -83,7 +84,7 @@ router.put('/:id/question/:qidx', async (req, res) => {
 router.delete('/:id/question/:qidx', async (req, res) => {
   try {
     const quiz = await PostQuiz.findById(req.params.id);
-    quiz.questionArray.splice(req.params.qidx, 1);
+    quiz.questions.splice(req.params.qidx, 1);
     await quiz.save();
     res.status(200).json(quiz);
   } catch (err) {

@@ -24,11 +24,11 @@ export const NewQuizPage = () => {
   const topicFromPath = window.location.pathname.split('/').pop().toLowerCase();
 
   const filtertopicwise = data.filter((el) => {
-    return el.title && el.title.toLowerCase() === topicFromPath;
+    return el.title && el.title.toLowerCase().includes(topicFromPath);
   });
 
-  // Use questionArray for quiz questions
-  const newfilterquestions = filtertopicwise[0]?.questionArray;
+  // Use questions for quiz questions
+  const newfilterquestions = filtertopicwise[0]?.questions;
   const dispatch = useDispatch();
 
   const fetchQuizData = () => {
