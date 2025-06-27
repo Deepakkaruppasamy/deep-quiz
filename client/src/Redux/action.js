@@ -110,7 +110,7 @@ const getAllUserDataFailure = (payload) => {
 export const getAllUserDataFromBackend = (payload) => (dispatch) => {
   dispatch(getAllUserDataRequest());
   axios
-    .get("https://deep-quiz-6.onrender.com/getuser")
+    .get("https://mern-quiz-server-sudhir.onrender.com/getuser")
     .then((res) => {
       dispatch(getAllUserDataSuccess(res.data));
     })
@@ -121,7 +121,7 @@ export const getAllUserDataFromBackend = (payload) => (dispatch) => {
 
 export const deleteUserByAdmin = (payload) => (dispatch) => {
   axios
-    .delete(`https://deep-quiz-6.onrender.com/${payload}`)
+    .delete(`https://mern-quiz-server-sudhir.onrender.com/${payload}`)
     .then((response) => {
       dispatch(getAllUserDataFromBackend());
     })
